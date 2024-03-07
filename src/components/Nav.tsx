@@ -3,7 +3,7 @@ import React from "react";
 const Nav: React.FC = ({}) => {
   return (
     <div className="fixed top-0 w-full h-12 flex justify-center items-center border-b-2 border-b-[#999999]/[.1]">
-      <div className="w-[1140px] h-full flex justify-between items-center">
+      <div className="w-[1200px] h-full flex justify-between items-center">
         <div className="flex items-center h-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"

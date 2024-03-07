@@ -20,7 +20,7 @@ const Login: React.FC = () => {
   });
 
   return (
-    <div className="w-[300px] h-[500px] flex flex-col justify-center items-center">
+    <div className="w-[300px] flex flex-col justify-center items-center">
       <div className="text-3xl font-bold text-primary">
         연호의 "가족" 이신가요?
       </div>
@@ -51,7 +51,7 @@ const Login: React.FC = () => {
         />
       </div>
       <button
-        className="w-[300px] h-12 rounded-full bg-m-200 mt-6 font-semibold text-lg"
+        className="w-[300px] h-12 rounded-full bg-m-200 mt-6 font-semibold text-lg hover:bg-m-600 hover:text-white"
         onClick={async () => {
           await pb
             .collection("Member")
@@ -68,6 +68,7 @@ const Login: React.FC = () => {
               };
               setUser(newUser);
               localStorage.setItem("loginState", "success");
+              localStorage.setItem("role", res.role);
               nav("/");
             })
             .catch(() => alert.onAndOff("당신은 가족이 맞으십니까??"));
